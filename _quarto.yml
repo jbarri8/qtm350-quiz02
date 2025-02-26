@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: docs
 
 website:
   title: "My Gapminder Analysis"
@@ -13,9 +14,6 @@ website:
         text: "Life & Population"
       - href: country.qmd
         text: "Country Analysis"
-      - about.qmd
-
-output-dir: docs
 
 format:
   html:
