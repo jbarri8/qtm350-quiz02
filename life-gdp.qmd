@@ -1,0 +1,29 @@
+---
+title: "Life Expectancy and GDP per Capita"
+---
+
+In this section, we analyze how life expectancy correlates with GDP per capita across years and continents.
+
+```{python}
+#| echo: true
+
+import pandas as pd
+import plotly.express as px
+
+df = pd.read_csv("gapminder.csv")
+
+fig = px.scatter(
+    df, 
+    x="gdp_per_capita", 
+    y="life_expectancy", 
+    animation_frame="year", 
+    color="continent",
+    hover_name="country",
+    size="population_millions",
+    range_x=[100, 60000], 
+    range_y=[20, 90],
+    title="Life Expectancy vs. GDP Per Capita"
+)
+
+fig.show()
+```
